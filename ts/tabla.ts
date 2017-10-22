@@ -16,10 +16,10 @@ export class Tabla {
             this.res = resp;
             let sor: number = 0;
             this.t = []; // inicializálás 1. lépés
-            fs.readFileSync(fájlnév).toString().split("\r\n").forEach(i => {
+            fs.readFileSync(fájlnév).toString().split("\n").forEach(i => {
                   this.t[sor] = []; // inicializálás 2. lépés
                   for (let j: number = 0; j < i.length; j++) {
-                        this.t[sor][j] = i[j];
+                        this.t[sor][j] = i[j].trim();
                   }
                   sor++;
             });
