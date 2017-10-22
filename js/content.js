@@ -34,7 +34,7 @@ class Content {
         res.write(`<p>    ${obj.SzabalyosLepes(m2[0], parseInt(m2[1]), parseInt(m2[2])) ?
             "Szabályos" : "Nem szabályos"} lépés!</p>`);
         res.write("<input type='submit' value='Frissítés'></form>");
-        // Nem a feladat része:
+        // Nem a feladat része :
         res.write("<p><b>allas.txt fájl::</b></p>");
         fs.readFileSync("allas.txt").toString().split("\n\r").forEach(i => {
             res.write(`${i}<br>`);
