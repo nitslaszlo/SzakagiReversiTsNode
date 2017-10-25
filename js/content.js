@@ -14,7 +14,7 @@ class Content {
         const p2 = query.p2 === undefined ? "K;1;3" : query.p2;
         // 4. feladat: osztálypéldány (objektum) létrehozása
         const obj = new tabla_1.Tabla("allas.txt", res);
-        res.write("<p>5. feladat: A betöltött tábla XYZ</p>");
+        res.write("<p>5. feladat: A betöltött tábla</p>");
         obj.Megjelenít();
         res.write("<p>6. feladat: Összegzés</p>");
         res.write(`    Kék korongok száma: ${obj.Megszámol("K")}<br>`);

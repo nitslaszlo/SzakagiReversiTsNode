@@ -19,7 +19,7 @@ export class Content {
         // 4. feladat: osztálypéldány (objektum) létrehozása
         const obj: Tabla = new Tabla("allas.txt", res);
 
-        res.write("<p>5. feladat: A betöltött tábla XYZ</p>");
+        res.write("<p>5. feladat: A betöltött tábla</p>");
         obj.Megjelenít();
 
         res.write("<p>6. feladat: Összegzés</p>");
