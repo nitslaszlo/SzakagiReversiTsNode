@@ -22,7 +22,7 @@ class Tabla {
         });
     }
     /** A tábla megjelenítése (5. feladat) */
-    Megjelenít() {
+    megjelenít() {
         this.t.forEach(i => {
             this.res.write(`    ${i.join("")}<br>`);
         });
@@ -31,7 +31,7 @@ class Tabla {
      * Megadott játékos korogjainak vagy az üres mezők megszámlálása (6. feladat)
      * @param {string} karakter - A megszámolandó karakter, , "F", "K" vagy "#"
      */
-    Megszámol(karakter) {
+    megszámol(karakter) {
         let darab = 0;
         this.t.forEach(i => {
             i.forEach(j => {
@@ -49,7 +49,7 @@ class Tabla {
      * @param {int} iranySor - A vízszintes irány (-1, 0, 1)
      * @param {int} iranyOszlop - A függőleges irány (-1, 0, 1)
      */
-    VanForditas(jatekos, sor, oszlop, iranySor, iranyOszlop) {
+    vanForditas(jatekos, sor, oszlop, iranySor, iranyOszlop) {
         let aktSor = sor + iranySor;
         let aktOszlop = oszlop + iranyOszlop;
         let ellenfel = "K";
@@ -74,13 +74,13 @@ class Tabla {
      * @param {int} sor - Az üres cella sora
      * @param {int} oszlop - A üres cella oszlopa
      */
-    SzabalyosLepes(jatekos, sor, oszlop) {
+    szabalyosLepes(jatekos, sor, oszlop) {
         if (this.t[sor][oszlop] !== "#")
             return false;
         for (let iSor = -1; iSor < 2; iSor++) {
             for (let iOszlop = -1; iOszlop < 2; iOszlop++) {
                 if (!(iSor === 0 && iOszlop === 0) &&
-                    this.VanForditas(jatekos, sor, oszlop, iSor, iOszlop)) {
+                    this.vanForditas(jatekos, sor, oszlop, iSor, iOszlop)) {
                     return true;
                 }
             }
@@ -88,5 +88,5 @@ class Tabla {
         return false;
     }
 }
-exports.Tabla = Tabla;
+exports.default = Tabla;
 //# sourceMappingURL=tabla.js.map
